@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f0f0f0"/>
+  <text x="400" y="80" font-family="Arial" font-size="32" text-anchor="middle" fill="#333">Parent-Teacher Conference</text>
+  <!-- Classroom setting -->
+  <rect x="150" y="120" width="500" height="300" fill="#fff" stroke="#999" stroke-width="2"/>
+  <!-- Teacher's desk -->
+  <rect x="200" y="150" width="120" height="60" fill="#d9d9d9" stroke="#999" stroke-width="2"/>
+  <!-- Teacher -->
+  <circle cx="260" cy="230" r="25" fill="#f0d0b0" stroke="#b39980" stroke-width="1"/>
+  <rect x="245" y="255" width="30" height="45" fill="#5a78a6" stroke="#3a5a78" stroke-width="1"/>
+  <!-- Parents and students -->
+  <!-- Family 1 -->
+  <circle cx="400" cy="230" r="20" fill="#f0d0b0" stroke="#b39980" stroke-width="1"/> <!-- Parent 1 -->
+  <rect x="390" y="250" width="20" height="30" fill="#a65a5a" stroke="#783a3a" stroke-width="1"/>
+  <circle cx="440" cy="230" r="20" fill="#f0d0b0" stroke="#b39980" stroke-width="1"/> <!-- Parent 2 -->
+  <rect x="430" y="250" width="20" height="30" fill="#5aa65a" stroke="#3a783a" stroke-width="1"/>
+  <circle cx="420" cy="270" r="15" fill="#f0d0b0" stroke="#b39980" stroke-width="1"/> <!-- Child -->
+  <rect x="415" y="285" width="10" height="20" fill="#5a5aa6" stroke="#3a3a78" stroke-width="1"/>
+  <!-- Family 2 -->
+  <circle cx="520" cy="230" r="20" fill="#f0d0b0" stroke="#b39980" stroke-width="1"/> <!-- Parent -->
+  <rect x="510" y="250" width="20" height="30" fill="#a6a65a" stroke="#78783a" stroke-width="1"/>
+  <circle cx="550" cy="250" r="15" fill="#f0d0b0" stroke="#b39980" stroke-width="1"/> <!-- Child -->
+  <rect x="545" y="265" width="10" height="20" fill="#a65a8c" stroke="#783a5a" stroke-width="1"/>
+  <!-- Chairs -->
+  <rect x="380" y="300" width="40" height="10" fill="#8c6b4a" stroke="#664d37" stroke-width="1"/>
+  <rect x="385" y="310" width="5" height="20" fill="#8c6b4a" stroke="#664d37" stroke-width="1"/>
+  <rect x="410" y="310" width="5" height="20" fill="#8c6b4a" stroke="#664d37" stroke-width="1"/>
+  <rect x="500" y="300" width="40" height="10" fill="#8c6b4a" stroke="#664d37" stroke-width="1"/>
+  <rect x="505" y="310" width="5" height="20" fill="#8c6b4a" stroke="#664d37" stroke-width="1"/>
+  <rect x="530" y="310" width="5" height="20" fill="#8c6b4a" stroke="#664d37" stroke-width="1"/>
+  <!-- Blackboard -->
+  <rect x="300" y="150" width="200" height="40" fill="#333"/>
+  <text x="400" y="175" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff">Academic Progress</text>
+  <!-- Text at bottom -->
+  <text x="400" y="450" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Scheduled for July 1, 2024</text>
+</svg>

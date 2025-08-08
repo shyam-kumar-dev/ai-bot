@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f0f0f0"/>
+  <text x="400" y="300" font-family="Arial" font-size="32" text-anchor="middle" fill="#333">Library Building Image</text>
+  <rect x="200" y="200" width="400" height="300" fill="#ddd" stroke="#999" stroke-width="2"/>
+  <rect x="300" y="350" width="200" height="150" fill="#fff" stroke="#999" stroke-width="2"/>
+  <rect x="250" y="250" width="50" height="80" fill="#fff" stroke="#999" stroke-width="2"/>
+  <rect x="500" y="250" width="50" height="80" fill="#fff" stroke="#999" stroke-width="2"/>
+  <!-- Books on shelves -->
+  <rect x="300" y="200" width="200" height="20" fill="#a67c52" stroke="#7d5a3c" stroke-width="1"/>
+  <rect x="300" y="230" width="200" height="20" fill="#a67c52" stroke="#7d5a3c" stroke-width="1"/>
+  <rect x="300" y="260" width="200" height="20" fill="#a67c52" stroke="#7d5a3c" stroke-width="1"/>
+</svg>

@@ -8,35 +8,42 @@ import {
 } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 
+// Import images from assets
+import campusImage from "@/assets/images/gallery/campus.svg";
+import academicImage from "@/assets/images/gallery/academic.svg";
+import libraryImage from "@/assets/images/gallery/library.svg";
+import sportsImage from "@/assets/images/gallery/sports.svg";
+import labImage from "@/assets/images/gallery/lab.svg";
+
 const SchoolGallerySection = () => {
   const schoolImages = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      url: campusImage,
       title: "Main Campus Building",
       description: "Our beautiful main campus with modern facilities"
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      url: academicImage,
       title: "Academic Block",
       description: "State-of-the-art classrooms and laboratories"
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      url: libraryImage,
       title: "Library Building",
       description: "Extensive library with digital resources"
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      url: sportsImage,
       title: "Sports Complex",
       description: "Modern sports facilities for all activities"
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      url: labImage,
       title: "Science Lab Block",
       description: "Advanced laboratories for practical learning"
     }

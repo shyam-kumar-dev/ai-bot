@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { Calendar, Clock, ArrowRight, Bell, Download, ExternalLink } from "lucide-react";
 import { EnhancedButton } from "@/components/ui/enhanced-button";
 
+// Import news images from assets
+import news1Image from "@/assets/images/news/news1.svg";
+import news2Image from "@/assets/images/news/news2.svg";
+import news3Image from "@/assets/images/news/news3.svg";
+import news4Image from "@/assets/images/news/news4.svg";
+
 const NewsSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState("news");
 
@@ -13,7 +19,7 @@ const NewsSection: React.FC = () => {
       date: "2024-07-15",
       time: "10:30 AM",
       category: "Achievement",
-      image: "/placeholder-news-1.jpg",
+      image: news1Image,
       urgent: true
     },
     {
@@ -23,7 +29,7 @@ const NewsSection: React.FC = () => {
       date: "2024-07-10",
       time: "2:00 PM",
       category: "Infrastructure",
-      image: "/placeholder-news-2.jpg"
+      image: news2Image
     },
     {
       id: 3,
@@ -32,7 +38,7 @@ const NewsSection: React.FC = () => {
       date: "2024-07-05",
       time: "9:15 AM",
       category: "Events",
-      image: "/placeholder-news-3.jpg"
+      image: news3Image
     },
     {
       id: 4,
@@ -41,7 +47,7 @@ const NewsSection: React.FC = () => {
       date: "2024-07-01",
       time: "4:00 PM",
       category: "Academic",
-      image: "/placeholder-news-4.jpg"
+      image: news4Image
     }
   ];
 

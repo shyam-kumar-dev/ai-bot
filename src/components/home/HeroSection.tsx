@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Award, Users, TrendingUp } from "lucide-react";
 import { EnhancedButton } from "@/components/ui/enhanced-button";
 
+// Import hero images from assets
+import hero1Image from "@/assets/images/hero/hero1.svg";
+import hero2Image from "@/assets/images/hero/hero2.svg";
+import hero3Image from "@/assets/images/hero/hero3.svg";
+
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [typewriterText, setTypewriterText] = useState("");
@@ -11,7 +16,7 @@ const HeroSection: React.FC = () => {
       title: "Excellence in Education",
       subtitle: "Nurturing Young Minds for Tomorrow's Leaders",
       description: "Join Alpha High School's prestigious IIT & Medical Foundation program and unlock your potential for success.",
-      image: "/placeholder-hero-1.jpg",
+      image: hero1Image,
       cta: "Explore Programs",
       stats: { label: "Success Rate", value: "98%" }
     },
@@ -19,7 +24,7 @@ const HeroSection: React.FC = () => {
       title: "IIT Foundation Program",
       subtitle: "Gateway to Engineering Excellence",
       description: "Comprehensive coaching and mentorship for JEE Main & Advanced with proven track record of success.",
-      image: "/placeholder-hero-2.jpg",
+      image: hero2Image,
       cta: "Learn More",
       stats: { label: "IIT Selections", value: "250+" }
     },
@@ -27,7 +32,7 @@ const HeroSection: React.FC = () => {
       title: "Medical Foundation",
       subtitle: "Your Path to Healthcare Leadership",
       description: "Expert guidance for NEET preparation with state-of-the-art facilities and experienced faculty.",
-      image: "/placeholder-hero-3.jpg",
+      image: hero3Image,
       cta: "Join Program",
       stats: { label: "Medical Seats", value: "180+" }
     }
