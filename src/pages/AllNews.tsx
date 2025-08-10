@@ -7,9 +7,9 @@ const AllNews = () => {
   const newsItems = [
     {
       id: 1,
-      title: "IIT Selections 2024: Record Breaking Results",
+      title: "IIT Selections 2025: Record Breaking Results",
       excerpt: "Alpha High School achieves unprecedented success with 85 students qualifying for IIT JEE Advanced 2024.",
-      date: "2024-07-15",
+      date: "2025-07-15",
       time: "10:30 AM",
       category: "Achievement"
     },
@@ -17,7 +17,7 @@ const AllNews = () => {
       id: 2,
       title: "New Science Laboratory Inauguration",
       excerpt: "State-of-the-art physics and chemistry labs equipped with advanced equipment for enhanced learning.",
-      date: "2024-07-10",
+      date: "2025-07-10",
       time: "2:00 PM",
       category: "Infrastructure"
     },
@@ -25,7 +25,7 @@ const AllNews = () => {
       id: 3,
       title: "Annual Sports Day 2024 - Registrations Open",
       excerpt: "Join us for the most exciting sports extravaganza featuring various athletic competitions and cultural events.",
-      date: "2024-07-05",
+      date: "2025-07-05",
       time: "9:15 AM",
       category: "Events"
     },
@@ -33,7 +33,7 @@ const AllNews = () => {
       id: 4,
       title: "Parent-Teacher Conference Scheduled",
       excerpt: "Important meeting to discuss student progress and upcoming academic plans for the new semester.",
-      date: "2024-07-01",
+      date: "2025-07-01",
       time: "4:00 PM",
       category: "Academic"
     },
@@ -41,7 +41,7 @@ const AllNews = () => {
       id: 5,
       title: "Academic Excellence Awards Ceremony",
       excerpt: "Recognizing outstanding achievements of our students in various academic competitions and examinations.",
-      date: "2024-06-25",
+      date: "2025-06-25",
       time: "11:00 AM",
       category: "Achievement"
     },
@@ -49,7 +49,7 @@ const AllNews = () => {
       id: 6,
       title: "Summer Vacation Guidelines",
       excerpt: "Important information regarding summer vacation homework, reading assignments, and safety guidelines.",
-      date: "2024-06-20",
+      date: "2025-06-20",
       time: "3:30 PM",
       category: "Academic"
     }

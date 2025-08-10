@@ -9,11 +9,11 @@ import {
 import { Card } from "@/components/ui/card";
 
 // Import images from assets
-import campusImage from "@/assets/images/gallery/campus.svg";
-import academicImage from "@/assets/images/gallery/academic.svg";
-import libraryImage from "@/assets/images/gallery/library.svg";
-import sportsImage from "@/assets/images/gallery/sports.svg";
-import labImage from "@/assets/images/gallery/lab.svg";
+import campusImage from "@/assets/images/gallery/campus.jpg";
+import academicImage from "@/assets/images/gallery/academic.jpg";
+import libraryImage from "@/assets/images/gallery/library.jpg";
+import sportsImage from "@/assets/images/gallery/sports.jpg";
+import labImage from "@/assets/images/gallery/lab.jpg";
 
 const SchoolGallerySection = () => {
   const schoolImages = [

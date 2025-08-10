@@ -4,6 +4,12 @@ import { Calendar, Clock, ArrowLeft, Share, Facebook, Twitter, MessageCircle, Ma
 import { EnhancedButton } from "@/components/ui/enhanced-button";
 import { useToast } from "@/hooks/use-toast";
 
+// Import news images from assets
+import news1Image from "@/assets/images/news/news1.jpg";
+import news2Image from "@/assets/images/news/news2.jpg";
+import news3Image from "@/assets/images/news/news3.jpg";
+import news4Image from "@/assets/images/news/news4.jpg";
+
 const NewsArticle = () => {
   const { id } = useParams();
   const { toast } = useToast();
@@ -91,8 +97,8 @@ const NewsArticle = () => {
 
   const articles = {
     "1": {
-      title: "IIT Selections 2024: Record Breaking Results",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      title: "IIT Selections 2025: Record Breaking Results",
+      image: news1Image,
       content: `Alpha High School has achieved unprecedented success in the IIT JEE Advanced 2024 examinations, with 85 of our students qualifying for admission to the prestigious Indian Institutes of Technology. This remarkable achievement represents a 40% increase from last year's results and positions Alpha High School as one of the leading educational institutions in the region.
 
 Our comprehensive IIT Foundation program, launched in 2018, has been instrumental in this success. The program combines rigorous academic training with innovative teaching methodologies, personalized mentoring, and regular assessment to ensure students are well-prepared for the competitive examinations.
@@ -109,11 +115,11 @@ We are proud of all our students who have worked tirelessly to achieve these res
       date: "2024-07-15",
       time: "10:30 AM",
       category: "Achievement",
-      author: "Dr. Rajesh Kumar, Principal"
+      author: "Mr. Reteesh T. Nair, Principal"
     },
     "2": {
       title: "New Science Laboratory Inauguration",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      image: news2Image,
       content: `Alpha High School proudly announces the inauguration of our new state-of-the-art science laboratories, designed to enhance the learning experience for our students in physics, chemistry, and biology. The new facilities represent a significant investment in educational infrastructure and demonstrate our commitment to providing world-class learning environments.
 
 The new laboratories feature:
@@ -131,7 +137,41 @@ This investment in infrastructure is part of our ongoing commitment to excellenc
       date: "2024-07-10",
       time: "2:00 PM",
       category: "Infrastructure",
-      author: "Mrs. Priya Sharma, Vice Principal"
+      author: "Mr. Reteesh T. Nair, Principal"
+    },
+    "3": {
+      title: "Annual Sports Day Celebration",
+      image: news3Image,
+      content: `Alpha High School successfully conducted its Annual Sports Day with great enthusiasm and competitive spirit. The event showcased the athletic talents of our students across various sports disciplines.
+
+The day began with a grand march-past by all houses, followed by the lighting of the sports torch and oath-taking ceremony. Students participated in track and field events including 100m, 200m, 400m races, long jump, high jump, shot put, and relay races.
+
+Team sports competitions in football, basketball, volleyball, and cricket were held in the weeks leading up to the main event, with finals played on Sports Day. The inter-house competition was fierce, with Red House emerging as the overall champion.
+
+Special awards were presented to outstanding athletes in different age categories. The event concluded with a cultural performance by the school's dance and music teams.
+
+The Sports Day not only promoted physical fitness but also instilled values of teamwork, sportsmanship, and discipline among our students.`,
+      date: "2024-06-25",
+      time: "9:00 AM",
+      category: "Events",
+      author: "Mr. Reteesh T. Nair, Principal"
+    },
+    "4": {
+      title: "National Science Olympiad Winners",
+      image: news4Image,
+      content: `We are proud to announce that Alpha High School students have achieved remarkable success in the National Science Olympiad 2024. Our students demonstrated exceptional scientific knowledge and problem-solving skills, securing top positions at both regional and national levels.
+
+A total of 45 students from our school participated in the competition, with 15 qualifying for the national round. Among these, 8 students secured positions in the top 100 nationally, with 3 students ranking in the top 20.
+
+Special congratulations to Aryan Sharma (Class 10) who secured the 4th rank nationally in the Junior Category, and Priya Patel (Class 12) who secured the 7th rank in the Senior Category.
+
+This achievement reflects the strong foundation in scientific concepts that our school provides, along with the dedication of our science faculty in nurturing young scientific minds.
+
+The winners will be felicitated in a special assembly next week, and will represent our school in the International Science Olympiad scheduled for December 2024.`,
+      date: "2024-06-18",
+      time: "11:45 AM",
+      category: "Achievement",
+      author: "Mr. Reteesh T. Nair, Principal"
     }
   };
 

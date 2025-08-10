@@ -1,6 +1,12 @@
 import React from "react";
 import { Trophy, Medal, Award, Star, TrendingUp, Users } from "lucide-react";
 
+// Import branch images
+import cumbumImg from "../../assets/images/branches/cumbum.jpg";
+import bestavaripetaImg from "../../assets/images/branches/bestavaripeta.jpg";
+import podiliImg from "../../assets/images/branches/podili.jpg";
+import kanigiriImg from "../../assets/images/branches/kanigiri.jpg";
+
 const AchievementsSection: React.FC = () => {
   const achievements = [
     {
@@ -121,7 +127,7 @@ const AchievementsSection: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-4 overflow-hidden rounded-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1527576539890-dfa815648363?auto=format&fit=crop&w=400&h=250" 
+                    src={cumbumImg} 
                     alt="Cumbum Branch" 
                     className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -133,7 +139,7 @@ const AchievementsSection: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-4 overflow-hidden rounded-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?auto=format&fit=crop&w=400&h=250" 
+                    src={bestavaripetaImg} 
                     alt="Bestavaripeta Branch" 
                     className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -145,7 +151,7 @@ const AchievementsSection: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-4 overflow-hidden rounded-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=400&h=250" 
+                    src={podiliImg} 
                     alt="Podili Branch" 
                     className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -157,7 +163,7 @@ const AchievementsSection: React.FC = () => {
               <div className="text-center group">
                 <div className="relative mb-4 overflow-hidden rounded-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=400&h=250" 
+                    src={kanigiriImg} 
                     alt="Kanigiri Branch" 
                     className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
                   />

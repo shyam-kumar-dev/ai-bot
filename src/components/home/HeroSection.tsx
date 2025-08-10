@@ -3,9 +3,9 @@ import { ChevronLeft, ChevronRight, Play, Award, Users, TrendingUp } from "lucid
 import { EnhancedButton } from "@/components/ui/enhanced-button";
 
 // Import hero images from assets
-import hero1Image from "@/assets/images/hero/hero1.svg";
-import hero2Image from "@/assets/images/hero/hero2.svg";
-import hero3Image from "@/assets/images/hero/hero3.svg";
+import hero1Image from "@/assets/images/hero/hero1.jpg";
+import hero2Image from "@/assets/images/hero/hero2.jpg";
+import hero3Image from "@/assets/images/hero/hero3.jpg";
 
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

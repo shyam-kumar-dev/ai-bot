@@ -3,10 +3,10 @@ import { Calendar, Clock, ArrowRight, Bell, Download, ExternalLink } from "lucid
 import { EnhancedButton } from "@/components/ui/enhanced-button";
 
 // Import news images from assets
-import news1Image from "@/assets/images/news/news1.svg";
-import news2Image from "@/assets/images/news/news2.svg";
-import news3Image from "@/assets/images/news/news3.svg";
-import news4Image from "@/assets/images/news/news4.svg";
+import news1Image from "@/assets/images/news/news1.jpg";
+import news2Image from "@/assets/images/news/news2.jpg";
+import news3Image from "@/assets/images/news/news3.jpg";
+import news4Image from "@/assets/images/news/news4.jpg";
 
 const NewsSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState("news");
@@ -15,8 +15,8 @@ const NewsSection: React.FC = () => {
     {
       id: 1,
       title: "IIT Selections 2024: Record Breaking Results",
-      excerpt: "Alpha High School achieves unprecedented success with 85 students qualifying for IIT JEE Advanced 2024.",
-      date: "2024-07-15",
+      excerpt: "Alpha High School achieves unprecedented success with 85 students qualifying for IIT JEE Advanced 2025.",
+      date: "2025-07-15",
       time: "10:30 AM",
       category: "Achievement",
       image: news1Image,
@@ -26,7 +26,7 @@ const NewsSection: React.FC = () => {
       id: 2,
       title: "New Science Laboratory Inauguration",
       excerpt: "State-of-the-art physics and chemistry labs equipped with advanced equipment for enhanced learning.",
-      date: "2024-07-10",
+      date: "2025-07-10",
       time: "2:00 PM",
       category: "Infrastructure",
       image: news2Image
@@ -35,7 +35,7 @@ const NewsSection: React.FC = () => {
       id: 3,
       title: "Annual Sports Day 2024 - Registrations Open",
       excerpt: "Join us for the most exciting sports extravaganza featuring various athletic competitions and cultural events.",
-      date: "2024-07-05",
+      date: "2025-07-05",
       time: "9:15 AM",
       category: "Events",
       image: news3Image
@@ -44,7 +44,7 @@ const NewsSection: React.FC = () => {
       id: 4,
       title: "Parent-Teacher Conference Scheduled",
       excerpt: "Important meeting to discuss student progress and upcoming academic plans for the new semester.",
-      date: "2024-07-01",
+      date: "2025-07-01",
       time: "4:00 PM",
       category: "Academic",
       image: news4Image
