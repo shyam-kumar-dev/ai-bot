@@ -1,18 +1,10 @@
 import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { EnhancedButton } from "@/components/ui/enhanced-button";
-import SEO from "@/components/SEO";
 
 const Contact = () => {
   return (
     <div className="min-h-screen">
-      <SEO 
-        title="Contact Alpha High School - Get in Touch"
-        description="Contact Alpha High School for admissions, inquiries, or to schedule a campus visit. Our team is ready to assist you with all your questions about our IIT & Medical foundation programs."
-        keywords="Alpha High School contact, school admissions, contact information, school address, school phone number, school email"
-        ogTitle="Contact Alpha High School - We're Here to Help"
-        ogDescription="Reach out to Alpha High School's dedicated team for information about admissions, programs, and campus visits."
-      />
       <section className="py-20 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-playfair font-bold mb-6">Contact Us</h1>

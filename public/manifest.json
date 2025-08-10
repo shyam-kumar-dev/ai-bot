@@ -1,7 +1,6 @@
 {
   "name": "Alpha High School",
   "short_name": "Alpha HS",
-  "description": "Alpha High School offers premier IIT & Medical Foundation programs with a proven track record of success.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
