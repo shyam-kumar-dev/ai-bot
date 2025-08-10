@@ -20,38 +20,43 @@ import NotFound from "./pages/NotFound";
 import NewsArticle from "./pages/NewsArticle";
 import AllNews from "./pages/AllNews";
 import AllCirculars from "./pages/AllCirculars";
+import { SEOProvider } from "./components/SEO";
+import SchoolStructuredData from "./components/SchoolStructuredData";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename={import.meta.env.PROD ? "/royal-alpha-hub" : ""}>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/principal-message" element={<PrincipalMessage />} />
-            <Route path="/director-message" element={<DirectorMessage />} />
-            <Route path="/academics" element={<Academics />} />
-            <Route path="/student-life" element={<StudentLife />} />
-            <Route path="/teachers" element={<Teachers />} />
-            <Route path="/facilities" element={<Facilities />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/certifications" element={<Certifications />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/news/:id" element={<NewsArticle />} />
-            <Route path="/news" element={<AllNews />} />
-            <Route path="/circulars" element={<AllCirculars />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </TooltipProvider>
+    <SEOProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <SchoolStructuredData />
+        <BrowserRouter basename={import.meta.env.PROD ? "/royal-alpha-hub" : ""}>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/principal-message" element={<PrincipalMessage />} />
+              <Route path="/director-message" element={<DirectorMessage />} />
+              <Route path="/academics" element={<Academics />} />
+              <Route path="/student-life" element={<StudentLife />} />
+              <Route path="/teachers" element={<Teachers />} />
+              <Route path="/facilities" element={<Facilities />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/certifications" element={<Certifications />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/news/:id" element={<NewsArticle />} />
+              <Route path="/news" element={<AllNews />} />
+              <Route path="/circulars" element={<AllCirculars />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </TooltipProvider>
+    </SEOProvider>
   </QueryClientProvider>
 );
 

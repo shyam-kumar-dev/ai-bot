@@ -1,5 +1,6 @@
 import React from "react";
 import { Award, Users, BookOpen, Target, Eye, Heart, Star } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -37,6 +38,13 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="About Alpha High School - Our History & Values"
+        description="Learn about Alpha High School's 28-year journey of educational excellence, our core values, and milestones that have shaped our institution into a premier IIT & Medical foundation."
+        keywords="Alpha High School history, school values, educational excellence, IIT foundation history, school milestones, about Alpha High School"
+        ogTitle="About Alpha High School - 28 Years of Excellence"
+        ogDescription="Discover the story behind Alpha High School's journey to becoming a leading institution for IIT & Medical foundation programs."
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero text-white">
         <div className="container mx-auto px-4 text-center">
