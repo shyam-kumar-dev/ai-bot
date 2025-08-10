@@ -32,7 +32,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <SchoolStructuredData />
-        <BrowserRouter basename={import.meta.env.PROD ? "/royal-alpha-hub" : ""}>
+        <BrowserRouter>
           <Layout>
             <Routes>
               <Route path="/" element={<Index />} />
