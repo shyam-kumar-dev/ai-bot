@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import ChatBot from "@/components/ui/ChatBot";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
@@ -55,6 +56,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <ChatBot />
     </div>
   );
 };

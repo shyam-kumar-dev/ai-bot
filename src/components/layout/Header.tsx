@@ -9,6 +9,12 @@ interface HeaderProps {
   toggleDarkMode: () => void;
 }
 
+interface NavigationItem {
+  name: string;
+  href: string;
+  onClick?: () => boolean | void;
+}
+
 const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
     };
   }, [isMenuOpen]);
 
-  const navigation = [
+  const navigation: NavigationItem[] = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Principal's Message", href: "/principal-message" },
@@ -61,6 +67,14 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
     { name: "Gallery", href: "/gallery" },
     { name: "Certifications", href: "/certifications" },
     { name: "Contact", href: "/contact" },
+    { name: "AI Chat", href: "#", onClick: () => {
+      // Open the chat bot
+      const chatBotButton = document.querySelector('.fixed.bottom-6.left-6 button');
+      if (chatBotButton) {
+        (chatBotButton as HTMLButtonElement).click();
+      }
+      return false; // Prevent navigation
+    }},
   ];
 
   return (
@@ -76,6 +90,9 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
               <span>info@alphahighschool.edu.in</span>
+            </div>
+            <div className="flex items-center space-x-2 ml-4">
+              <span>Near RTC Busstand, Cumbum, Prakasam Dist, Andhra Pradesh</span>
             </div>
           </div>
           <div className="hidden lg:block">
@@ -109,17 +126,33 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1 overflow-x-auto ml-8 mr-6">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-3 py-2 rounded-lg transition-all duration-300 font-medium text-sm whitespace-nowrap ${
-                    location.pathname === item.href
-                      ? "bg-primary text-primary-foreground shadow-royal"
-                      : "text-foreground hover:bg-primary/10 hover:text-primary"
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                item.onClick ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      item.onClick && item.onClick();
+                    }}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 font-medium text-sm whitespace-nowrap cursor-pointer
+                      text-foreground hover:bg-primary/10 hover:text-primary
+                    `}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 font-medium text-sm whitespace-nowrap ${
+                      location.pathname === item.href
+                        ? "bg-primary text-primary-foreground shadow-royal"
+                        : "text-foreground hover:bg-primary/10 hover:text-primary"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
             </nav>
 
@@ -153,18 +186,33 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <div className="lg:hidden fixed inset-0 top-[80px] bg-background/95 backdrop-blur-md border-t border-border shadow-xl z-[999] overflow-y-auto" style={{ height: 'calc(100vh - 80px)', maxHeight: 'calc(var(--vh, 1vh) * 100 - 80px)' }}>
               <div className="flex flex-col space-y-2 p-6 pb-20">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
-                      location.pathname === item.href
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground hover:bg-primary/10"
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+                  item.onClick ? (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium text-foreground hover:bg-primary/10 cursor-pointer`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsMenuOpen(false);
+                        item.onClick && item.onClick();
+                      }}
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
+                        location.pathname === item.href
+                          ? "bg-primary text-primary-foreground"
+                          : "text-foreground hover:bg-primary/10"
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>

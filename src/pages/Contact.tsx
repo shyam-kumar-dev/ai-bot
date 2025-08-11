@@ -36,7 +36,7 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                   <div>
                     <p className="font-semibold">Address</p>
-                    <p className="text-muted-foreground">123 Education Street, Knowledge City, State - 123456</p>
+                    <p className="text-muted-foreground">Near RTC Busstand, Cumbum, Prakasam Dist, Andhra Pradesh - 523333</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">

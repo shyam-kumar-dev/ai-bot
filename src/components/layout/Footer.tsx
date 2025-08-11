@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-gold flex-shrink-0" />
-                  <span className="text-sm">123 Education Street, Knowledge City, State - 123456</span>
+                  <span className="text-sm">Near RTC Busstand, Cumbum, Prakasam Dist, Andhra Pradesh - 523333</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-gold flex-shrink-0" />
@@ -112,6 +112,12 @@ const Footer: React.FC = () => {
                     <Link 
                       to={link.href} 
                       className="text-primary-foreground/80 hover:text-gold transition-colors duration-300 hover:translate-x-1 inline-block"
+                      onClick={(e) => {
+                        // Add a small delay to ensure the link is visible when clicked
+                        setTimeout(() => {
+                          window.scrollTo(0, 0);
+                        }, 100);
+                      }}
                     >
                       {link.name}
                     </Link>
@@ -129,6 +135,12 @@ const Footer: React.FC = () => {
                     <Link 
                       to={program.href} 
                       className="text-primary-foreground/80 hover:text-gold transition-colors duration-300 hover:translate-x-1 inline-block"
+                      onClick={(e) => {
+                        // Add a small delay to ensure the link is visible when clicked
+                        setTimeout(() => {
+                          window.scrollTo(0, 0);
+                        }, 100);
+                      }}
                     >
                       {program.name}
                     </Link>
@@ -170,10 +182,26 @@ const Footer: React.FC = () => {
               </p>
             </div>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-primary-foreground/80 hover:text-gold transition-colors duration-300">
+              <Link 
+                to="/privacy" 
+                className="text-primary-foreground/80 hover:text-gold transition-colors duration-300"
+                onClick={() => {
+                  setTimeout(() => {
+                    window.scrollTo(0, 0);
+                  }, 100);
+                }}
+              >
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-primary-foreground/80 hover:text-gold transition-colors duration-300">
+              <Link 
+                to="/terms" 
+                className="text-primary-foreground/80 hover:text-gold transition-colors duration-300"
+                onClick={() => {
+                  setTimeout(() => {
+                    window.scrollTo(0, 0);
+                  }, 100);
+                }}
+              >
                 Terms of Service
               </Link>
             </div>
