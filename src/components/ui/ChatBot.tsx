@@ -53,7 +53,7 @@ const generateResponse = (query: string): string => {
   // Greeting patterns
   if (lowerQuery.match(/^(hello|hi|hey|greetings|howdy|namaste|good morning|good afternoon|good evening|good day)/)) {
     const timeGreeting = getTimeBasedGreeting();
-    return `${timeGreeting} I'm the ${schoolInfo.name} virtual assistant. How can I help you today? You can ask me about our programs, facilities, admissions, faculty, events, student life, IIT and medical seat placements, or any other information about our school.`;
+    return `${timeGreeting} I'm the ${schoolInfo.name} virtual AI assistant. How can I help you today? You can ask me about our programs, facilities, admissions, faculty, events, student life, IIT and medical seat placements, or any other information about our school.`;
   }
   
   // Contact information
@@ -302,7 +302,7 @@ const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   // Initialize with time-based greeting
-  const initialGreeting = `${getTimeBasedGreeting()} I'm the Alpha High School virtual assistant. How can I help you today? You can ask me about our programs, facilities, admissions, principal, teachers, directory, events, student life, IIT and medical seat placements, or any other information about our school.`;
+  const initialGreeting = `${getTimeBasedGreeting()} I'm the Alpha High School virtual AI assistant. How can I help you today? You can ask me about our programs, facilities, admissions, principal, teachers, directory, events, student life, IIT and medical seat placements, or any other information about our school.`;
   
   const [messages, setMessages] = useState<Message[]>([{
     id: '1',

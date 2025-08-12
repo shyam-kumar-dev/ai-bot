@@ -128,11 +128,16 @@
     @apply bg-background text-foreground font-poppins antialiased;
     font-feature-settings: "cv03", "cv04", "cv11";
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 
   html {
     scroll-behavior: smooth;
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
   }
 }
 

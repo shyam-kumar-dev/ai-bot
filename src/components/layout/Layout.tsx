@@ -49,9 +49,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden w-full">
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <main className="pt-[120px]">
+      <main className="pt-[120px] w-full overflow-x-hidden">
         {children}
       </main>
       <Footer />
