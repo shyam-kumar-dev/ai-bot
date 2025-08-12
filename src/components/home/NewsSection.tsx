@@ -14,7 +14,7 @@ const NewsSection: React.FC = () => {
   const newsItems = [
     {
       id: 1,
-      title: "IIT Selections 2024: Record Breaking Results",
+      title: "IIT Selections 2025: Record Breaking Results",
       excerpt: "Alpha High School achieves unprecedented success with 85 students qualifying for IIT JEE Advanced 2025.",
       date: "2025-07-15",
       time: "10:30 AM",

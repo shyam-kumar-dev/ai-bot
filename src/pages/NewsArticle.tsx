@@ -99,7 +99,7 @@ const NewsArticle = () => {
     "1": {
       title: "IIT Selections 2025: Record Breaking Results",
       image: news1Image,
-      content: `Alpha High School has achieved unprecedented success in the IIT JEE Advanced 2024 examinations, with 85 of our students qualifying for admission to the prestigious Indian Institutes of Technology. This remarkable achievement represents a 40% increase from last year's results and positions Alpha High School as one of the leading educational institutions in the region.
+      content: `Alpha High School has achieved unprecedented success in the IIT JEE Advanced 2025 examinations, with 85 of our students qualifying for admission to the prestigious Indian Institutes of Technology. This remarkable achievement represents a 40% increase from last year's results and positions Alpha High School as one of the leading educational institutions in the region.
 
 Our comprehensive IIT Foundation program, launched in 2018, has been instrumental in this success. The program combines rigorous academic training with innovative teaching methodologies, personalized mentoring, and regular assessment to ensure students are well-prepared for the competitive examinations.
 
@@ -112,7 +112,7 @@ Key highlights of our IIT JEE Advanced 2024 results:
 The success can be attributed to our dedicated faculty, state-of-the-art facilities, and most importantly, the hard work and dedication of our students. Our faculty members, many of whom are IIT alumni themselves, bring real-world experience and deep subject knowledge to the classroom.
 
 We are proud of all our students who have worked tirelessly to achieve these results. This success reinforces our commitment to providing quality education and nurturing future engineers and innovators.`,
-      date: "2024-07-15",
+      date: "2025-06-15",
       time: "10:30 AM",
       category: "Achievement",
       author: "Mr. Reteesh T. Nair, Principal"
@@ -267,7 +267,7 @@ The winners will be felicitated in a special assembly next week, and will repres
               <img 
                 src={article.image} 
                 alt={article.title}
-                className="w-full h-64 md:h-80 object-cover rounded-lg"
+                className="w-full h-auto max-h-full object-contain rounded-lg"
               />
             </div>
           )}
