@@ -1,6 +1,94 @@
 // School information dataset for the AI chatbot
 
 export const schoolInfo = {
+  placements: {
+    overview: 'Alpha High School has an exceptional track record of student placements in prestigious institutions.',
+    iitPlacements: {
+      total: '45 students secured IIT seats in the last academic year',
+      topInstitutes: [
+        'IIT Bombay - 8 students',
+        'IIT Delhi - 7 students',
+        'IIT Madras - 10 students',
+        'IIT Kanpur - 5 students',
+        'IIT Kharagpur - 6 students',
+        'IIT Roorkee - 4 students',
+        'IIT Guwahati - 3 students',
+        'IIT Hyderabad - 2 students'
+      ],
+      rankHolders: [
+        'Arjun Mehta - AIR 45',
+        'Priya Sharma - AIR 78',
+        'Rahul Verma - AIR 120'
+      ],
+      preparationProgram: 'Our specialized IIT Foundation program provides comprehensive coaching with expert faculty, regular mock tests, and personalized mentoring.',
+      successRate: '85% of our IIT Foundation program students secure seats in IITs or other top engineering colleges.'
+    },
+    medicalPlacements: {
+      total: '38 students secured medical college seats in the last academic year',
+      topInstitutes: [
+        'AIIMS Delhi - 5 students',
+        'JIPMER Puducherry - 4 students',
+        'CMC Vellore - 3 students',
+        'AFMC Pune - 2 students',
+        'Government Medical Colleges - 18 students',
+        'Private Medical Colleges - 6 students'
+      ],
+      rankHolders: [
+        'Sneha Patel - NEET AIR 67',
+        'Vikram Singh - NEET AIR 112',
+        'Ananya Desai - NEET AIR 156'
+      ],
+      preparationProgram: 'Our Medical Foundation program offers specialized NEET preparation with biology labs, hospital visits, and guidance from experienced medical professionals.',
+      successRate: '80% of our Medical Foundation program students secure seats in medical colleges.'
+    },
+    testimonials: [
+      'The focused coaching and mentoring at Alpha High School were instrumental in my success at IIT-JEE. - Arjun Mehta, IIT Bombay',
+      'The practical approach to medical concepts and regular mock tests helped me secure a top rank in NEET. - Sneha Patel, AIIMS Delhi'
+    ]
+  },
+  studentLife: {
+    overview: 'Alpha High School offers a vibrant and enriching student life experience that complements academic learning.',
+    clubs: [
+      'Science Club - Weekly experiments and projects',
+      'Literary Club - Creative writing and debates',
+      'Art Club - Painting, sculpture, and visual arts',
+      'Music & Dance Club - Classical and contemporary performances',
+      'Coding Club - Programming and app development',
+      'Eco Club - Environmental awareness and conservation',
+      'Robotics Club - Building and programming robots',
+      'Drama Club - Theater and performance arts'
+    ],
+    activities: [
+      'Morning assembly with prayer, news, and thought for the day',
+      'House system with inter-house competitions',
+      'Annual sports meet and cultural festival',
+      'Educational field trips and excursions',
+      'Community service and social outreach programs',
+      'Leadership development through student council',
+      'Career guidance and counseling sessions'
+    ],
+    facilities: [
+      'Recreation rooms with indoor games',
+      'Student lounges for relaxation between classes',
+      'Cafeteria with nutritious meal options',
+      'Well-maintained playgrounds and sports facilities',
+      'Meditation and yoga spaces'
+    ],
+    schedule: 'Regular classes from 8:00 AM to 3:00 PM followed by extracurricular activities until 4:00 PM',
+    traditions: [
+      'Annual cultural festival "Kaleidoscope"',
+      'Founders Day celebrations',
+      'Farewell ceremony for graduating students',
+      'Alumni day reunions',
+      'Inter-school competitions and festivals'
+    ],
+    support: [
+      'Dedicated student counselors',
+      'Peer mentoring program',
+      'Academic support and remedial classes',
+      'Health and wellness programs'
+    ]
+  },
   director: {
     name: 'Mr. MalKonda Reddy',
     qualification: 'MBA - Strategic Management, IIM Bangalore',
@@ -427,6 +515,10 @@ export const schoolInfo = {
     {
       question: 'How can I contact a specific department?',
       answer: 'You can find contact information for all departments in our school directory. Each department has a dedicated email address and phone extension.'
+    },
+    {
+      question: 'How many students get IIT and medical seats each year?',
+      answer: 'In the last academic year, 45 students secured IIT seats and 38 students secured medical college seats. Our IIT Foundation program has an 85% success rate, and our Medical Foundation program has an 80% success rate. For more details, please contact our Admissions Office.'
     },
   ],
 };

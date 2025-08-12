@@ -12,13 +12,48 @@ type Message = {
   timestamp: Date;
 };
 
+// Get time-based greeting
+const getTimeBasedGreeting = (): string => {
+  const now = new Date();
+  const hour = now.getHours();
+  const month = now.getMonth();
+  const date = now.getDate();
+  
+  // Check for special occasions
+  if (month === 11 && (date >= 24 && date <= 26)) { // Christmas
+    return 'Merry Christmas!';
+  } else if (month === 11 && date === 31) { // New Year's Eve
+    return 'Happy New Year\'s Eve!';
+  } else if (month === 0 && date === 1) { // New Year's Day
+    return 'Happy New Year!';
+  } else if (month === 7 && date === 15) { // Independence Day (India)
+    return 'Happy Independence Day!';
+  } else if (month === 0 && date === 26) { // Republic Day (India)
+    return 'Happy Republic Day!';
+  } else if (month === 9 && (date >= 15 && date <= 30)) { // Diwali period (approximate)
+    return 'Happy Diwali season!';
+  }
+  
+  // Regular time-based greetings
+  if (hour >= 5 && hour < 12) {
+    return 'Good morning!';
+  } else if (hour >= 12 && hour < 17) {
+    return 'Good afternoon!';
+  } else if (hour >= 17 && hour < 22) {
+    return 'Good evening!';
+  } else {
+    return 'Hello!';
+  }
+};
+
 // Advanced AI response generator based on user query
 const generateResponse = (query: string): string => {
   const lowerQuery = query.toLowerCase();
   
   // Greeting patterns
-  if (lowerQuery.match(/^(hello|hi|hey|greetings|howdy|namaste)/)) {
-    return `Hello! I'm the ${schoolInfo.name} virtual assistant. How can I help you today? You can ask me about our programs, facilities, admissions, faculty, events, or any other information about our school.`;
+  if (lowerQuery.match(/^(hello|hi|hey|greetings|howdy|namaste|good morning|good afternoon|good evening|good day)/)) {
+    const timeGreeting = getTimeBasedGreeting();
+    return `${timeGreeting} I'm the ${schoolInfo.name} virtual assistant. How can I help you today? You can ask me about our programs, facilities, admissions, faculty, events, student life, IIT and medical seat placements, or any other information about our school.`;
   }
   
   // Contact information
@@ -180,21 +215,98 @@ const generateResponse = (query: string): string => {
     return `Transport Services at ${schoolInfo.name}:\n\n${transportFacility?.description}\n\nTransport Fee: ${schoolInfo.admissions.fees.transport}\n\nFor route details and more information, please contact our office at ${schoolInfo.contact.phone[0]}.`;
   }
   
+  // IIT and Medical Placements
+  if (lowerQuery.match(/(iit|jee|engineering|medical|neet|mbbs|seat|placement|rank|entrance|coaching|success rate|top rank)/)) {
+    // If specifically asking about IIT seats
+    if (lowerQuery.match(/(how many|number of|total|count)/) && lowerQuery.match(/(iit|jee|engineering)/)) {
+      return `IIT Placements at ${schoolInfo.name}:\n\n${schoolInfo.placements.iitPlacements.total}\n\nTop Institutes:\n${schoolInfo.placements.iitPlacements.topInstitutes.map(institute => `- ${institute}`).join('\n')}\n\nNotable Rank Holders:\n${schoolInfo.placements.iitPlacements.rankHolders.map(student => `- ${student}`).join('\n')}\n\nSuccess Rate: ${schoolInfo.placements.iitPlacements.successRate}\n\nFor more information about our IIT Foundation program, please contact our Admissions Office.`;
+    }
+    
+    // If specifically asking about Medical seats
+    if (lowerQuery.match(/(how many|number of|total|count)/) && lowerQuery.match(/(medical|neet|mbbs|doctor)/)) {
+      return `Medical Placements at ${schoolInfo.name}:\n\n${schoolInfo.placements.medicalPlacements.total}\n\nTop Institutes:\n${schoolInfo.placements.medicalPlacements.topInstitutes.map(institute => `- ${institute}`).join('\n')}\n\nNotable Rank Holders:\n${schoolInfo.placements.medicalPlacements.rankHolders.map(student => `- ${student}`).join('\n')}\n\nSuccess Rate: ${schoolInfo.placements.medicalPlacements.successRate}\n\nFor more information about our Medical Foundation program, please contact our Admissions Office.`;
+    }
+    
+    // General placements information
+    return `Placements at ${schoolInfo.name}:\n\n${schoolInfo.placements.overview}\n\nIIT Placements:\n${schoolInfo.placements.iitPlacements.total}\nSuccess Rate: ${schoolInfo.placements.iitPlacements.successRate}\n\nMedical Placements:\n${schoolInfo.placements.medicalPlacements.total}\nSuccess Rate: ${schoolInfo.placements.medicalPlacements.successRate}\n\nStudent Testimonials:\n${schoolInfo.placements.testimonials.map(testimonial => `- ${testimonial}`).join('\n')}\n\nFor detailed information about our placement records, please ask specifically about IIT seats or Medical seats.`;
+  }
+  
+  // Student Life
+  if (lowerQuery.match(/(student life|campus life|student experience|extracurricular|club|activity|student club|after school|student support)/)) {
+    return `Student Life at ${schoolInfo.name}:\n\n${schoolInfo.studentLife.overview}\n\nClubs and Activities:\n${schoolInfo.studentLife.clubs.map(club => `- ${club}`).join('\n')}\n\nRegular Activities:\n${schoolInfo.studentLife.activities.map(activity => `- ${activity}`).join('\n')}\n\nStudent Facilities:\n${schoolInfo.studentLife.facilities.map(facility => `- ${facility}`).join('\n')}\n\nSchedule: ${schoolInfo.studentLife.schedule}\n\nSchool Traditions:\n${schoolInfo.studentLife.traditions.map(tradition => `- ${tradition}`).join('\n')}\n\nStudent Support:\n${schoolInfo.studentLife.support.map(support => `- ${support}`).join('\n')}`;
+  }
+  
   // Thank you and goodbye
   if (lowerQuery.match(/(thank|thanks|bye|goodbye|see you|farewell)/)) {
-    return `You're welcome! If you have any more questions about ${schoolInfo.name}, feel free to ask anytime. Have a great day!`;
+    const timeGreeting = getTimeBasedGreeting();
+    let response = '';
+    
+    if (lowerQuery.match(/(thank|thanks)/)) {
+      response = `You're welcome! If you have any more questions about ${schoolInfo.name}, feel free to ask anytime. Have a great day!`;
+    } else if (lowerQuery.match(/(bye|goodbye|see you|farewell)/)) {
+      const hour = new Date().getHours();
+      if (hour >= 20 || hour < 5) {
+        response = `Good night! Thank you for chatting with me. If you have more questions about ${schoolInfo.name}, feel free to ask anytime.`;
+      } else {
+        response = `${timeGreeting} Thank you for chatting with me. If you have more questions about ${schoolInfo.name}, feel free to ask anytime.`;
+      }
+    }
+    
+    return response;
+  }
+  
+  // Wishes patterns
+  if (lowerQuery.match(/(good morning|good afternoon|good evening|good night|good day)/)) {
+    const timeGreeting = getTimeBasedGreeting();
+    return `${timeGreeting} How can I assist you with information about ${schoolInfo.name} today?`;
+  }
+  
+  // Festival wishes patterns
+  if (lowerQuery.match(/(happy|merry) (new year|christmas|diwali|independence day|republic day|teachers day|children('s)? day|holi|dussehra|navratri|eid|onam)/i)) {
+    let festival = '';
+    
+    if (lowerQuery.includes('new year')) {
+      festival = 'New Year';
+    } else if (lowerQuery.includes('christmas')) {
+      festival = 'Christmas';
+    } else if (lowerQuery.includes('diwali')) {
+      festival = 'Diwali';
+    } else if (lowerQuery.includes('independence day')) {
+      festival = 'Independence Day';
+    } else if (lowerQuery.includes('republic day')) {
+      festival = 'Republic Day';
+    } else if (lowerQuery.includes('teachers day')) {
+      festival = 'Teachers Day';
+    } else if (lowerQuery.match(/children('s)? day/)) {
+      festival = 'Children\'s Day';
+    } else if (lowerQuery.includes('holi')) {
+      festival = 'Holi';
+    } else if (lowerQuery.includes('dussehra')) {
+      festival = 'Dussehra';
+    } else if (lowerQuery.includes('navratri')) {
+      festival = 'Navratri';
+    } else if (lowerQuery.includes('eid')) {
+      festival = 'Eid';
+    } else if (lowerQuery.includes('onam')) {
+      festival = 'Onam';
+    }
+    
+    return `Thank you! Wishing you a very Happy ${festival} as well! How can I assist you with information about ${schoolInfo.name} today?`;
   }
   
   // Default response for unrecognized queries
-  return `I'm not sure I understand your question about "${query}". You can ask me about our contact information, address, timings, programs, facilities, admissions, principal, teachers, directory, events, achievements, alumni, values, or COVID-19 safety measures. How can I help you today?`;
+  return `I'm not sure I understand your question about "${query}". You can ask me about our contact information, address, timings, programs, facilities, admissions, principal, teachers, directory, events, achievements, alumni, values, student life, IIT and medical seat placements, or COVID-19 safety measures. How can I help you today?`;
 };
 
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
+  // Initialize with time-based greeting
+  const initialGreeting = `${getTimeBasedGreeting()} I'm the Alpha High School virtual assistant. How can I help you today? You can ask me about our programs, facilities, admissions, principal, teachers, directory, events, student life, IIT and medical seat placements, or any other information about our school.`;
+  
   const [messages, setMessages] = useState<Message[]>([{
     id: '1',
-    text: 'Hello! I\'m the Alpha High School virtual assistant. How can I help you today? You can ask me about our programs, facilities, admissions, principal, teachers, directory, events, or any other information about our school.',
+    text: initialGreeting,
     sender: 'bot',
     timestamp: new Date(),
   }]);
